@@ -1,4 +1,4 @@
-
+import java.util.Arrays;
 /**
  * Write a description of class MatrixMath here.
  *
@@ -16,7 +16,7 @@ public class MatrixMath
     public MatrixMath(int[][] data)
     {
         // initialise instance variables
-       
+        this.data=data;
     }
 
     /**
@@ -25,9 +25,15 @@ public class MatrixMath
      *
      * @return    int[]
      */
-    public int[] rowSum()
+    public int[] rowSum(int y)
     {
-        return null;
+        int[] sum=new int[1];
+        for(int x=0;x<=data[y].length-1;x++)
+            {
+                sum[0]=sum[0]+data[y][x];
+            }
+        System.out.println(Arrays.toString(sum));
+        return sum;
     }
     
         /**
@@ -35,9 +41,11 @@ public class MatrixMath
      *
      * @return    int[] 
      */
-    public double[] rowAve()
+    public double[] rowAve(int y)
     {
-        return null;
+        int [] avSum=rowSum(y);
+        System.out.println(Arrays.toString(avSum));
+        
     }
     
         /**

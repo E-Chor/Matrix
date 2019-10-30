@@ -18,13 +18,13 @@ public class MatrixMathDriver
 		/* TODO
 		 * Use Arrays.toString on the results below
 		 */
-        mathA.rowSum();
+        mathA.rowSum(0);
         mathA.rowAve();
         mathA.colSum();
         mathA.colAve();
         
         MatrixMath mathB = new MatrixMath(B);
-        mathB.rowSum();
+        mathB.rowSum(0);
         mathB.rowAve();
         mathB.colSum();
         mathB.colAve();
