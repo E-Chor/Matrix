@@ -43,9 +43,14 @@ public class MatrixMath
      */
     public double[] rowAve(int y)
     {
-        int [] avSum=rowSum(y);
-        System.out.println(Arrays.toString(avSum));
-        
+        double[] sum=new double[1];
+        for(int x=0;x<=data[y].length-1;x++)
+            {
+                sum[0]=sum[0]+data[y][x];
+            }
+        sum[0]=sum[0]/data[y].length;
+        System.out.println(Arrays.toString(sum));
+        return sum;
     }
     
         /**
@@ -54,9 +59,15 @@ public class MatrixMath
      *
      * @return    int[] 
      */
-    public int[] colSum()
+    public int[] colSum(int y)
     {
-        return null;
+        int [] sum=new int[1];
+        for(int x=0; x<data.length;x++)
+            {
+                sum[0]=sum[0]+data[x][y];
+            }
+        System.out.println(Arrays.toString(sum));
+        return sum;
     }
     
      /**
@@ -64,9 +75,16 @@ public class MatrixMath
      *
      * @return    int[] 
      */
-    public double[] colAve()
+    public double[] colAve(int y)
     {
-        return null;
+        double [] sum=new double[1];
+        for(int x=0; x<data.length;x++)
+            {
+                sum[0]=sum[0]+data[x][y];
+            }
+        sum[0]=sum[0]/data.length;
+        System.out.println(Arrays.toString(sum));
+        return sum;
     }
     
 }
